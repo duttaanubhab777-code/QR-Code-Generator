@@ -2,52 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#07041a">
+    <meta name="description" content="Ultimate QR Code Generator: turn any URL or text into a scannable QR code with colors, quality options and auto-labeled PNG export.">
     <title>QR Code Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="qrcode.css">
 </head>
 <body>
-    
-    
-    <div class="box">
-        
-        <div class="qr-header">
-            <h1>QR Code Generator</h1>
-           <input id="input-text" type="text" placeholder ="Enter Your URL">
-           <div>
-           <label for="size"><b>Select Quality:-</b>
-           </label>
-           <select id="size">         <option value ="100">100x100</option>
-<option value ="200">200x200</option>
-<option value ="300">300x300</option>
-<option value ="400">400x400</option>
-<option value ="500">500x500</option>
-<option value ="600">600x600</option>
-<option value ="700">700x700</option>
-<option value ="800">800x800</option>
-<option value ="900">900x900</option>
-<option value ="1000">1000x1000</option>
 
-</select>
-          </div>  
-        </div>
-        <div class="qr-body">
-            <div id="qrcode">
-                
-            </div>
-            
-        </div>
-        <div class="qr-footer">
-            <button id="gen">Genarate</button>
-            <button id="download-btn">Download</button>
-            
-            
-        </div>
-        
-    <p style="text-align: center; font-size: 13px; color:#ff0a00; font-weight: bold; margin-top:18px;">Created by Anubhab Dutta.</p>
+    <!-- Animated background layers -->
+    <div class="bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="grid"></span>
     </div>
+    <canvas id="fx" aria-hidden="true"></canvas>
+
+    <main class="scene">
+        <div class="box" id="box">
+            <div class="box-inner">
+
+                <header class="qr-header">
+                    <h1 id="title" aria-label="QR Code Generator">QR Code Generator</h1>
+                    <p class="sub">Any link or text, turned into a code in one tap.</p>
+
+                    <div class="field">
+                        <input id="input-text" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Enter Your URL" aria-label="URL or text">
+                        <button id="clear-btn" class="clear" type="button" aria-label="Clear input">&times;</button>
+                        <span class="field-line"></span>
+                    </div>
+                    <div class="meta"><span id="counter">0 characters</span></div>
+
+                    <div class="row">
+                        <label for="size">Select Quality</label>
+                        <div class="select-wrap">
+                            <select id="size">
+                                <option value="100">100x100</option>
+                                <option value="200">200x200</option>
+                                <option value="300" selected>300x300</option>
+                                <option value="400">400x400</option>
+                                <option value="500">500x500</option>
+                                <option value="600">600x600</option>
+                                <option value="700">700x700</option>
+                                <option value="800">800x800</option>
+                                <option value="900">900x900</option>
+                                <option value="1000">1000x1000</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <span class="label">QR Color</span>
+                        <div class="swatches" id="swatches" role="radiogroup" aria-label="QR color">
+                            <button type="button" class="sw active" data-color="#0b0b1a" style="--c:#0b0b1a" role="radio" aria-checked="true" aria-label="Midnight"></button>
+                            <button type="button" class="sw" data-color="#4c1d95" style="--c:#4c1d95" role="radio" aria-checked="false" aria-label="Violet"></button>
+                            <button type="button" class="sw" data-color="#0e4f8b" style="--c:#0e4f8b" role="radio" aria-checked="false" aria-label="Ocean"></button>
+                            <button type="button" class="sw" data-color="#047857" style="--c:#047857" role="radio" aria-checked="false" aria-label="Emerald"></button>
+                            <button type="button" class="sw" data-color="#b91c1c" style="--c:#b91c1c" role="radio" aria-checked="false" aria-label="Crimson"></button>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="qr-body" aria-live="polite">
+                    <div class="stage" id="stage">
+                        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+                        <div id="qrcode"></div>
+                        <div class="placeholder" id="placeholder">
+                            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 8h18v18H8zM38 8h18v18H38zM8 38h18v18H8zM38 38h8v8h-8zM50 50h6v6h-6zM38 50h6v6h-6zM50 38h6v6h-6z"/></svg>
+                            <span>Your QR will appear here</span>
+                        </div>
+                        <span class="scan" id="scan"></span>
+                    </div>
+                </section>
+
+                <footer class="qr-footer">
+                    <button id="gen" class="btn primary" type="button"><span>Generate</span></button>
+                    <button id="download-btn" class="btn ghost" type="button"><span>Download</span></button>
+                    <button id="share-btn" class="btn ghost" type="button" hidden><span>Share</span></button>
+                </footer>
+
+                <p class="credit">Created by Anubhab Dutta.</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="toasts" id="toasts" aria-live="assertive"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-<script src="qrcode.js"></script>
+    <script src="qrcode.js"></script>
 </body>
 </html>
+
