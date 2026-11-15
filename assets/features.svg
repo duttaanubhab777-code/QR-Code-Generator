@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 406" width="1000" height="406" role="img" aria-label="Feature cards">
+  <defs>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".07"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif}</style>
+  <g transform="translate(0 0)">
+    <rect width="316" height="190" rx="22" fill="#12082e" fill-opacity=".92" stroke="#7c3aed" stroke-opacity=".55" stroke-width="1.5"/>
+    <rect width="316" height="190" rx="22" fill="url(#shine)"/>
+    <g transform="translate(26 24)"><path d="M30 6 L12 34 H26 L22 54 L44 24 H29 Z" fill="#7c3aed"><animate attributeName="opacity" values="1;.45;1" dur="1.6s" repeatCount="indefinite"/></path></g>
+    <text x="26" y="118" font-size="20" font-weight="700" fill="#fff">Any text or URL</text>
+    <text x="26" y="144" font-size="14.5" fill="#b9b0e6"><tspan x="26" dy="0">Links, paragraphs, Wi-Fi details.</tspan><tspan x="26" dy="22">Press Enter to generate instantly.</tspan></text>
+  </g>
+  <g transform="translate(342 0)">
+    <rect width="316" height="190" rx="22" fill="#12082e" fill-opacity=".92" stroke="#22d3ee" stroke-opacity=".55" stroke-width="1.5"/>
+    <rect width="316" height="190" rx="22" fill="url(#shine)"/>
+    <g transform="translate(26 24)"><rect x="6" y="6" width="20" height="20" rx="4" fill="none" stroke="#22d3ee" stroke-width="3"/><rect x="14" y="14" width="40" height="40" rx="6" fill="#22d3ee" fill-opacity=".25" stroke="#22d3ee" stroke-width="3"><animateTransform attributeName="transform" type="scale" values="1;1.12;1" additive="sum" dur="2.4s" repeatCount="indefinite"/></rect></g>
+    <text x="26" y="118" font-size="20" font-weight="700" fill="#fff">Quality 100 to 1000 px</text>
+    <text x="26" y="144" font-size="14.5" fill="#b9b0e6"><tspan x="26" dy="0">Small for sharing, large for print.</tspan><tspan x="26" dy="22">Live update when you change it.</tspan></text>
+  </g>
+  <g transform="translate(684 0)">
+    <rect width="316" height="190" rx="22" fill="#12082e" fill-opacity=".92" stroke="#ff2e93" stroke-opacity=".55" stroke-width="1.5"/>
+    <rect width="316" height="190" rx="22" fill="url(#shine)"/>
+    <g transform="translate(26 24)"><circle cx="10" cy="30" r="6" fill="#7c3aed"><animate attributeName="cy" values="30;22;30" dur="1.8s" begin="0.00s" repeatCount="indefinite"/></circle><circle cx="21" cy="30" r="6" fill="#22d3ee"><animate attributeName="cy" values="30;22;30" dur="1.8s" begin="0.18s" repeatCount="indefinite"/></circle><circle cx="32" cy="30" r="6" fill="#10b981"><animate attributeName="cy" values="30;22;30" dur="1.8s" begin="0.36s" repeatCount="indefinite"/></circle><circle cx="43" cy="30" r="6" fill="#ff2e93"><animate attributeName="cy" values="30;22;30" dur="1.8s" begin="0.54s" repeatCount="indefinite"/></circle><circle cx="54" cy="30" r="6" fill="#ffb020"><animate attributeName="cy" values="30;22;30" dur="1.8s" begin="0.72s" repeatCount="indefinite"/></circle></g>
+    <text x="26" y="118" font-size="20" font-weight="700" fill="#fff">5 color themes</text>
+    <text x="26" y="144" font-size="14.5" fill="#b9b0e6"><tspan x="26" dy="0">Dark, high-contrast colors that</tspan><tspan x="26" dy="22">scan well. Changes live.</tspan></text>
+  </g>
+  <g transform="translate(0 216)">
+    <rect width="316" height="190" rx="22" fill="#12082e" fill-opacity=".92" stroke="#ffb020" stroke-opacity=".55" stroke-width="1.5"/>
+    <rect width="316" height="190" rx="22" fill="url(#shine)"/>
+    <g transform="translate(26 24)"><rect x="10" y="6" width="40" height="46" rx="6" fill="none" stroke="#ffb020" stroke-width="3"/><path d="M30 16 V36 M21 28 L30 37 L39 28" fill="none" stroke="#ffb020" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><animateTransform attributeName="transform" type="translate" values="0 -3;0 3;0 -3" dur="1.4s" repeatCount="indefinite"/></path><rect x="19" y="43" width="22" height="3" rx="1.5" fill="#ffb020"/></g>
+    <text x="26" y="118" font-size="20" font-weight="700" fill="#fff">PNG export with label</text>
+    <text x="26" y="144" font-size="14.5" fill="#b9b0e6"><tspan x="26" dy="0">White quiet zone plus the source</tspan><tspan x="26" dy="22">text printed under the code.</tspan></text>
+  </g>
+  <g transform="translate(342 216)">
+    <rect width="316" height="190" rx="22" fill="#12082e" fill-opacity=".92" stroke="#22d3ee" stroke-opacity=".55" stroke-width="1.5"/>
+    <rect width="316" height="190" rx="22" fill="url(#shine)"/>
+    <g transform="translate(26 24)"><path d="M18 30 L42 16 M18 30 L42 44" stroke="#22d3ee" stroke-width="3" fill="none"/><circle cx="16" cy="30" r="7" fill="#22d3ee"/><circle cx="44" cy="15" r="7" fill="#22d3ee" fill-opacity=".8"><animate attributeName="r" values="7;9;7" dur="1.6s" repeatCount="indefinite"/></circle><circle cx="44" cy="45" r="7" fill="#22d3ee" fill-opacity=".8"><animate attributeName="r" values="7;9;7" dur="1.6s" begin=".5s" repeatCount="indefinite"/></circle></g>
+    <text x="26" y="118" font-size="20" font-weight="700" fill="#fff">Share button</text>
+    <text x="26" y="144" font-size="14.5" fill="#b9b0e6"><tspan x="26" dy="0">Send the PNG straight to any app</tspan><tspan x="26" dy="22">on phones that support it.</tspan></text>
+  </g>
+  <g transform="translate(684 216)">
+    <rect width="316" height="190" rx="22" fill="#12082e" fill-opacity=".92" stroke="#7c3aed" stroke-opacity=".55" stroke-width="1.5"/>
+    <rect width="316" height="190" rx="22" fill="url(#shine)"/>
+    <g transform="translate(26 24)"><path d="M30 5 L50 13 V30 C50 43 41 51 30 56 C19 51 10 43 10 30 V13 Z" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="3"><animate attributeName="fill-opacity" values=".15;.5;.15" dur="2.2s" repeatCount="indefinite"/></path><path d="M21 30 L28 37 L40 23" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="26" y="118" font-size="20" font-weight="700" fill="#fff">Error correction H</text>
+    <text x="26" y="144" font-size="14.5" fill="#b9b0e6"><tspan x="26" dy="0">Still scans when the code is</tspan><tspan x="26" dy="22">slightly damaged or dirty.</tspan></text>
+  </g>
+</svg>

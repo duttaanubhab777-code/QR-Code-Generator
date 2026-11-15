@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" width="1000" height="510" role="img" aria-label="What changed to make the UI smooth">
+  <defs>
+    <linearGradient id="ar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff2e93"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+    <linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb020"/><stop offset=".5" stop-color="#ff2e93"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  </defs>
+  <style>text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif}.r{font-size:16px;fill:#ffd0e4}.g{font-size:16px;fill:#c9f7e4}.h{font-size:15px;font-weight:700;letter-spacing:2px;fill:#b9b0e6}</style>
+  <rect width="1000" height="510" rx="26" fill="#0d0630"/>
+  <rect x="1" y="1" width="998" height="508" rx="25" fill="none" stroke="url(#hd)" stroke-opacity=".7" stroke-width="2"/>
+  <text x="500" y="46" text-anchor="middle" font-size="26" font-weight="800" fill="url(#hd)">What changed to make it buttery smooth</text>
+  <text class="h" x="240" y="82" text-anchor="middle">BEFORE (LAGGY)</text>
+  <text class="h" x="760" y="82" text-anchor="middle">NOW (SMOOTH)</text>
+  <g transform="translate(0 96)">
+    <rect x="30" y="0" width="420" height="40" rx="20" fill="#ff2e93" fill-opacity=".14" stroke="#ff2e93" stroke-opacity=".6"/>
+    <text x="240" y="25.5" text-anchor="middle" class="r">backdrop-filter blur on the card</text>
+    <path d="M470 20 H530 M519 11 L530 20 L519 29" stroke="url(#ar)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" begin="0.0s" repeatCount="indefinite"/></path>
+    <rect x="550" y="0" width="420" height="40" rx="20" fill="#10b981" fill-opacity=".16" stroke="#34d399" stroke-opacity=".7"/>
+    <text x="760" y="25.5" text-anchor="middle" class="g">solid glass layer, no live blur</text>
+  </g>
+  <g transform="translate(0 152)">
+    <rect x="30" y="0" width="420" height="40" rx="20" fill="#ff2e93" fill-opacity=".14" stroke="#ff2e93" stroke-opacity=".6"/>
+    <text x="240" y="25.5" text-anchor="middle" class="r">blur(70px) on huge moving blobs</text>
+    <path d="M470 20 H530 M519 11 L530 20 L519 29" stroke="url(#ar)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" begin="0.2s" repeatCount="indefinite"/></path>
+    <rect x="550" y="0" width="420" height="40" rx="20" fill="#10b981" fill-opacity=".16" stroke="#34d399" stroke-opacity=".7"/>
+    <text x="760" y="25.5" text-anchor="middle" class="g">soft radial gradients, transform only</text>
+  </g>
+  <g transform="translate(0 208)">
+    <rect x="30" y="0" width="420" height="40" rx="20" fill="#ff2e93" fill-opacity=".14" stroke="#ff2e93" stroke-opacity=".6"/>
+    <text x="240" y="25.5" text-anchor="middle" class="r">conic border repainted every frame</text>
+    <path d="M470 20 H530 M519 11 L530 20 L519 29" stroke="url(#ar)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></path>
+    <rect x="550" y="0" width="420" height="40" rx="20" fill="#10b981" fill-opacity=".16" stroke="#34d399" stroke-opacity=".7"/>
+    <text x="760" y="25.5" text-anchor="middle" class="g">gradient layer that only rotates</text>
+  </g>
+  <g transform="translate(0 264)">
+    <rect x="30" y="0" width="420" height="40" rx="20" fill="#ff2e93" fill-opacity=".14" stroke="#ff2e93" stroke-opacity=".6"/>
+    <text x="240" y="25.5" text-anchor="middle" class="r">scan line moved with top (layout)</text>
+    <path d="M470 20 H530 M519 11 L530 20 L519 29" stroke="url(#ar)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></path>
+    <rect x="550" y="0" width="420" height="40" rx="20" fill="#10b981" fill-opacity=".16" stroke="#34d399" stroke-opacity=".7"/>
+    <text x="760" y="25.5" text-anchor="middle" class="g">moved with transform (GPU)</text>
+  </g>
+  <g transform="translate(0 320)">
+    <rect x="30" y="0" width="420" height="40" rx="20" fill="#ff2e93" fill-opacity=".14" stroke="#ff2e93" stroke-opacity=".6"/>
+    <text x="240" y="25.5" text-anchor="middle" class="r">one stroke per particle link</text>
+    <path d="M470 20 H530 M519 11 L530 20 L519 29" stroke="url(#ar)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" begin="0.8s" repeatCount="indefinite"/></path>
+    <rect x="550" y="0" width="420" height="40" rx="20" fill="#10b981" fill-opacity=".16" stroke="#34d399" stroke-opacity=".7"/>
+    <text x="760" y="25.5" text-anchor="middle" class="g">links batched into 3 strokes</text>
+  </g>
+  <g transform="translate(0 376)">
+    <rect x="30" y="0" width="420" height="40" rx="20" fill="#ff2e93" fill-opacity=".14" stroke="#ff2e93" stroke-opacity=".6"/>
+    <text x="240" y="25.5" text-anchor="middle" class="r">particles rebuilt on every resize</text>
+    <path d="M470 20 H530 M519 11 L530 20 L519 29" stroke="url(#ar)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" begin="1.0s" repeatCount="indefinite"/></path>
+    <rect x="550" y="0" width="420" height="40" rx="20" fill="#10b981" fill-opacity=".16" stroke="#34d399" stroke-opacity=".7"/>
+    <text x="760" y="25.5" text-anchor="middle" class="g">kept and rescaled, bar jitter ignored</text>
+  </g>
+  <g transform="translate(0 432)">
+    <rect x="30" y="0" width="420" height="40" rx="20" fill="#ff2e93" fill-opacity=".14" stroke="#ff2e93" stroke-opacity=".6"/>
+    <text x="240" y="25.5" text-anchor="middle" class="r">layout read on every pointermove</text>
+    <path d="M470 20 H530 M519 11 L530 20 L519 29" stroke="url(#ar)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" begin="1.2s" repeatCount="indefinite"/></path>
+    <rect x="550" y="0" width="420" height="40" rx="20" fill="#10b981" fill-opacity=".16" stroke="#34d399" stroke-opacity=".7"/>
+    <text x="760" y="25.5" text-anchor="middle" class="g">cached centre, one write per frame</text>
+  </g>
+</svg>

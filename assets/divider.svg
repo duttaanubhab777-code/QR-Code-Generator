@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 14" width="1000" height="14" aria-hidden="true">
+  <defs>
+    <linearGradient id="d" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#7c3aed"/><stop offset=".25" stop-color="#ff2e93"/><stop offset=".5" stop-color="#ffb020"/><stop offset=".75" stop-color="#22d3ee"/><stop offset="1" stop-color="#7c3aed"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="1 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="dot"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect x="20" y="6" width="960" height="2.5" rx="1.25" fill="url(#d)" opacity=".9"/>
+  <circle cy="7.2" r="7" fill="url(#dot)"><animate attributeName="cx" values="20;980;20" dur="6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/></circle>
+</svg>

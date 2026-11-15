@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 636 56" width="636" height="56" role="img" aria-label="Any link or text. One tap. One QR code.">
+  <defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#ff2e93"/><stop offset="1" stop-color="#22d3ee"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="1 0" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <clipPath id="c0"><rect x="20" y="0" height="56" width="0">
+    <animate attributeName="width" values="0.0;522.6;522.6;0.0;0.0" keyTimes="0.0000;0.1000;0.2733;0.3200;1.0000" dur="15.0s" repeatCount="indefinite"/></rect></clipPath>
+  <text x="20" y="36" font-size="22" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace" fill="url(#tg)" textLength="522.6" lengthAdjust="spacing" clip-path="url(#c0)">Any link or text. One tap. One QR code.</text>
+  <clipPath id="c1"><rect x="20" y="0" height="56" width="0">
+    <animate attributeName="width" values="0.0;0.0;469.0;469.0;0.0;0.0" keyTimes="0.0000;0.3333;0.4333;0.6067;0.6533;1.0000" dur="15.0s" repeatCount="indefinite"/></rect></clipPath>
+  <text x="20" y="36" font-size="22" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace" fill="url(#tg)" textLength="469.0" lengthAdjust="spacing" clip-path="url(#c1)">Butter smooth on phone and desktop.</text>
+  <clipPath id="c2"><rect x="20" y="0" height="56" width="0">
+    <animate attributeName="width" values="0.0;0.0;576.2;576.2;0.0;0.0" keyTimes="0.0000;0.6667;0.7667;0.9400;0.9867;1.0000" dur="15.0s" repeatCount="indefinite"/></rect></clipPath>
+  <text x="20" y="36" font-size="22" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace" fill="url(#tg)" textLength="576.2" lengthAdjust="spacing" clip-path="url(#c2)">Pick a color, pick a quality, download PNG.</text>
+  <rect y="14" width="3" height="30" rx="1.5" fill="#22d3ee" x="20" opacity="0">
+    <animate attributeName="x" values="20.0;542.6;542.6;20.0;20.0" keyTimes="0.0000;0.1000;0.2733;0.3200;1.0000" dur="15.0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0.0000;0.1000;0.2733;0.3200;1.0000" dur="15.0s" repeatCount="indefinite"/></rect>
+  <rect y="14" width="3" height="30" rx="1.5" fill="#22d3ee" x="20" opacity="0">
+    <animate attributeName="x" values="20.0;20.0;489.0;489.0;20.0;20.0" keyTimes="0.0000;0.3333;0.4333;0.6067;0.6533;1.0000" dur="15.0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.0000;0.3333;0.4333;0.6067;0.6533;1.0000" dur="15.0s" repeatCount="indefinite"/></rect>
+  <rect y="14" width="3" height="30" rx="1.5" fill="#22d3ee" x="20" opacity="0">
+    <animate attributeName="x" values="20.0;20.0;596.2;596.2;20.0;20.0" keyTimes="0.0000;0.6667;0.7667;0.9400;0.9867;1.0000" dur="15.0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.0000;0.6667;0.7667;0.9400;0.9867;1.0000" dur="15.0s" repeatCount="indefinite"/></rect>
+</svg>
